@@ -6,4 +6,4 @@ Issues:
 - Does not send any error back if the file is too large to send (I could honestly probably make this, but I'm lazy)
 
 Important notes:
-The twitch-dl.pyz included is from https://github.com/ihabunek/twitch-dl, if you want to verify it you can delete it and just redownload it from their release page, I just added it for simplicity
+- The twitch-dl.pyz included is from https://github.com/ihabunek/twitch-dl, if you want to verify it you can delete it and just redownload it from their release page, I just added it for simplicity

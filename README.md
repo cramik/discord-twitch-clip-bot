@@ -7,3 +7,4 @@ Issues:
 
 Important notes:
 - The twitch-dl.pyz included is from https://github.com/ihabunek/twitch-dl, if you want to verify it you can delete it and just redownload it from their release page, I just added it for simplicity
+- Requires official discord.py, to get this just do "pip install discord"

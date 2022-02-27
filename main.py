@@ -16,7 +16,12 @@ async def on_message(message):
     return
 
   if "https://clips.twitch.tv/" in message.content:
-    output = subprocess.Popen(["python3", "twitch-dl.pyz", "download", "-q", "source", message.content], stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
+    content=message.content
+    begin=content.find("https://clips.twitch.tv/")+24
+    end=content.find(' ',begin)
+    if (end == -1): end = len(content)
+    print("downloading " + content[begin:end])
+    output = subprocess.Popen(["python", "twitch-dl.pyz", "download", "-q", "source", content[begin:end]], stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
     downloadpos = output.find('Downloaded: ')
     if downloadpos != -1:
         filenamestart = downloadpos+12
